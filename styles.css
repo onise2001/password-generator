@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #14131b, #08070b);
+  padding: 64px 16px;
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  max-width: 375px;
+  margin: auto;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #817d92;
+  margin-bottom: 16px;
+}
+
+.password-input {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+input[type="text"] {
+  border: none;
+  background-color: #24232c;
+  color: #e6e5ea;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 17px 16px;
+  width: 100%;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+#copy-svg {
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#copy-svg svg {
+  fill: #a4ffaf;
+}
+
+#copy-svg svg:hover,
+#copy-svg svg:active {
+  cursor: pointer;
+  fill: #fff;
+}
+.password-generator {
+  background-color: #24232c;
+  padding: 21px 16px 16px;
+}
+
+p,
+label {
+  font-size: 1.6rem;
+  color: #e6e5ea;
+  font-weight: bold;
+}
+.password-length {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #a4ffaf;
+}
+
+.length-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+#length-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #a4ffaf 0%,
+    #a4ffaf var(--value, 50%),
+    #d3d3d3 var(--value, 50%),
+    #d3d3d3 100%
+  );
+  margin-bottom: 42px;
+}
+
+#length-input::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 0;
+  background: transparent;
+}
+
+#length-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e6e5ea;
+  margin-top: -10px;
+}
+
+#length-input:hover::-webkit-slider-thumb,
+#length-input:active::-webkit-slider-thumb {
+  cursor: pointer;
+  border: solid 2px #a4ffaf;
+  background-color: #18171f;
+}
+
+.password-choices {
+  margin-bottom: 32px;
+}
+.password-choice {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+input[type="checkbox"]:checked {
+  background-color: #a4ffaf;
+  padding: 6px 4px;
+}
+.strength-text {
+  color: #817d92;
+}
+.password-strenght,
+.strength-rating,
+.ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.password-strenght {
+  background-color: #18171f;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.ratings {
+  gap: 8px;
+}
+.strength-rating {
+  gap: 16px;
+}
+.rating {
+  padding: 14px 5px;
+  border: solid 2px #e6e5ea;
+}
+
+.generate-button {
+  all: unset;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #24232c;
+  padding: 18px 0;
+  background-color: #a4ffaf;
+  background-image: url("./assets/images/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center right 90px;
+  width: 100%;
+  text-align: center;
+}
+
+.generate-button:hover,
+.generate-button:active {
+  cursor: pointer;
+  padding: 16px 0;
+  background: url("./assets/images/icon-arrow-right-green.svg"), transparent;
+  background-repeat: no-repeat;
+  background-position: center right 90px;
+
+  color: #a4ffaf;
+  border: solid 2px #a4ffaf;
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 31px;
+  }
+  main {
+    max-width: 540px;
+  }
+
+  .password-input {
+    padding-bottom: 24px;
+  }
+
+  input[type="text"] {
+    padding: 19px 32px;
+    font-size: 3.2rem;
+  }
+
+  .password-generator {
+    padding: 24px 32px 32px;
+  }
+  p,
+  label {
+    font-size: 1.8rem;
+  }
+  .length-wrapper {
+    margin-bottom: 35px;
+  }
+  .password-choices {
+    margin-bottom: 35px;
+  }
+  .password-choice {
+    margin-bottom: 23px;
+  }
+  .password-strenght {
+    padding: 22px 32px;
+    margin-bottom: 32px;
+  }
+}
